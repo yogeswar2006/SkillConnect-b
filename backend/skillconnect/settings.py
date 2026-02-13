@@ -22,11 +22,7 @@ SECRET_KEY =os.getenv('SECRECT_KEY',"unsafe-build-secret-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "10.42.0.63",    #"custom backend domain"
-]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 
 AUTH_USER_MODEL="account.CustomUser"
 
