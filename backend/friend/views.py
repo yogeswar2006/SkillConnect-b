@@ -48,7 +48,7 @@ def SendFriendRequest(request):
             
      profile_image=None            
      if request.user.profile_img:
-         profile_image=request.user.profile_img
+         profile_image=request.user.profile_img.url
          
          
      

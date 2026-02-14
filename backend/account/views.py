@@ -104,7 +104,7 @@ class CurrentUserView(APIView):
     permission_classes = [IsAuthenticated]
     def get(self,request,*args, **kwargs):
         
-        profile_img = ((request.user.profile_img)
+        profile_img = ((request.user.profile_img.url)
                         if request.user.profile_img
                         else None
         )
@@ -136,7 +136,7 @@ def UpdateProfile(request):
     
     user.save()
     
-    profile_img = ((request.user.profile_img)
+    profile_img = ((request.user.profile_img.url)
                         if request.user.profile_img
                         else None
         )
