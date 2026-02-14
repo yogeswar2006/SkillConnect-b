@@ -103,12 +103,12 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 # CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    # frontend url
+    "v0-skill-connect-f.vercel.app"
 ]
 
 # in production
 CORS_ALLOWED_ORIGINS =[
-    #"custom frontend domain"
+    "v0-skill-connect-f.vercel.app"
 ]
 CORS_ALLOW_CREDENTIALS = True
 
