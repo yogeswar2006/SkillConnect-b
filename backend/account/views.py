@@ -101,7 +101,7 @@ class LogoutView(APIView):
 
 @method_decorator(csrf_exempt, name="dispatch")
 class CurrentUserView(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
     def get(self,request,*args, **kwargs):
         
         profile_img = ((request.user.profile_img)
