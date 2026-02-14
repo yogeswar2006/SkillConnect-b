@@ -103,12 +103,12 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 # CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "v0-skill-connect-f.vercel.app"
+    "https://v0-skill-connect-f.vercel.app"
 ]
 
 # in production
 CORS_ALLOWED_ORIGINS =[
-    "v0-skill-connect-f.vercel.app"
+    "https://v0-skill-connect-f.vercel.app"
 ]
 CORS_ALLOW_CREDENTIALS = True
 
@@ -230,9 +230,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 WHITENOISE_SKIP_COMPRESS_EXTENSIONS = [
