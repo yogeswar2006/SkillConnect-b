@@ -150,7 +150,7 @@ def FetchPendingRequests(request):
             "sender_id":fr.sender.id,
             "sender_username":fr.sender.username,
             "sender_profile_image":(
-                fr.sender.profile_img if fr.sender.profile_img else None
+                fr.sender.profile_img.url if fr.sender.profile_img else None
             )
             
         }  for fr in requests]
